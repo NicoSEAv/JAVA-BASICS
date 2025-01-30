@@ -1,3 +1,6 @@
+// strict mode is a special mode that allows us to write secure JS code, first line of code, comments are allowed. Allowed to avoid bugs beacuse: it creates visible errors in certain situations where Java fails silently
+
+"use strict";
 const myName = "NICO";
 console.log(myName);
 console.log(typeof myName);
@@ -24,7 +27,7 @@ console.log(x);
 //------------------------------------------------------------------------------------------------------------------------------------
 // Strings and Template Literals
 const firstName = "Jonas";
-const job = "teacher";
+const myJob = "teacher";
 const birthYear = 1991;
 const year = 2037;
 // Two ways for the template literals
@@ -33,7 +36,7 @@ const jonas =
   "I'm " + firstName + ", a " + (year - birthYear) + " year old " + job + "!";
 console.log(jonas);
 // Second way: template literals using backticks `` and ${}
-const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${myJob}!`;
 console.log(jonasNew);
 // Multiple lines: using the \n\ character
 console.log(
@@ -120,3 +123,37 @@ switch (day) {
   default:
     console.log("Not a valid day!");
 }
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+//The Conditional Operator (Ternary operator)
+//Ternary beacuse it has 3 parts: the condition, the if part and the else part
+
+const myAge1 = 23;
+myAge1 >= 18
+  ? console.log("I like to drink wine 🍷")
+  : console.log("I like to drink water 💧");
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+
+//Functions
+//The are piece of code that can be reused later in the code
+//Functions can be called with the function name followed by the parentheses.
+
+function logger() {
+  console.log("Logger function created succesfully!");
+}
+logger();
+// We can pass parameters to the function and store the result in a variable that can be used later in the code
+function fruitProcessor(apples, oranges) {
+  console.log(apples, oranges);
+  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+  return juice;
+}
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+
+// We can also use the function to return a value that can bes saved later in a variable and used in the code
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+console.log(calcAge2(1997));
