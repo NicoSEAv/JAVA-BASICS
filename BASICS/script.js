@@ -187,7 +187,7 @@ console.log(friends[0]);
 // to change an element of the array we use the index of the element between square brackets
 friends[2] = "Jay";
 console.log(friends);
-// to add an element to the array we use the push method
+// to add an element to the array we use the push method that adds the element at the end of the array
 friends.push("John");
 console.log(friends);
 // to add an element to the array we use the unshift method that adds the element at the beginning of the array
@@ -206,3 +206,22 @@ console.log(friends.indexOf("Bob"));
 // .includes() --> Determines whether an array includes a certain value among its entries, returning true or false as appropriate. It uses the strict equality operator (===) for comparisons.
 console.log(friends.includes("Steven"));
 console.log(friends.includes("Bob"));
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+// Objects
+// Objects are collections of key-value pairs
+// Objects are unordered
+// Objects are mutable
+// Objects can store different types of values
+// Objects can store other objects
+// Objects can store functions
+// Objects can store arrays
+
+// Object declaration
+const nico = {
+  firstName: "Nico",
+  lastName: "Pav",
+  age: 2021 - 1997,
+  job: "developer",
+  friends: ["Michael", "Steven", "Peter"],
+};
