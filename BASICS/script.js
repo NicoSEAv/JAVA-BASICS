@@ -157,3 +157,52 @@ const calcAge2 = function (birthYear) {
   return 2037 - birthYear;
 };
 console.log(calcAge2(1997));
+
+// Three ways to declare a function
+// Function declaration: we declare the function with the function keyword and to use it we can call it before the declaration usinng the function name followed by the parentheses
+function calcAge1(birthYear) {
+  return 2037 - birthYear;
+}
+// Function expression: we declare the function using a variable and an anonymous function the output of the function is stored in the variable
+const calcAge3 = function (birthYear) {
+  return 2037 - birthYear;
+};
+// Arrow function: we declare the function using the arrow function syntax
+const calcAge4 = (birthYear) => 2037 - birthYear;
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+// Arrays
+// they are a collection of values that can be stored in a single variable
+// they are 0-based indexed
+// they can store different types of values
+// they can store other arrays
+// they can store functions
+// they can store objects
+
+// Array declaration
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+// to recall an element of the array we use the index of the element between square brackets
+console.log(friends[0]);
+// to change an element of the array we use the index of the element between square brackets
+friends[2] = "Jay";
+console.log(friends);
+// to add an element to the array we use the push method
+friends.push("John");
+console.log(friends);
+// to add an element to the array we use the unshift method that adds the element at the beginning of the array
+friends.unshift("Ric");
+console.log(friends);
+// .pop() --> Removes the last element from an array and returns it. If the array is empty, undefined is returned and the array is not modified
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+// .shift() --> Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+friends.shift();
+console.log(friends);
+// .indexOf() --> Returns the first index at which a given element can be found in the array, or -1 if it is not present.
+console.log(friends.indexOf("Steven"));
+console.log(friends.indexOf("Bob"));
+// .includes() --> Determines whether an array includes a certain value among its entries, returning true or false as appropriate. It uses the strict equality operator (===) for comparisons.
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
